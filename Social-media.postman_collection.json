@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "0456f009-725f-49c3-840c-1fb0557b0dd0",
+		"name": "Social-media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21875146",
+		"_collection_link": "https://gold-meteor-163435.postman.co/workspace/Team-Workspace~7718caee-c69a-41b7-8236-2c7ec6386c29/collection/21875146-0456f009-725f-49c3-840c-1fb0557b0dd0?action=share&source=collection_link&creator=21875146"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"nguyenan202\",\r\n    \"email\": \"annt123@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"firstName\": \"An\",\r\n    \"lastName\": \"Nguyen\",\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernameOrEmail\": \"annt123@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		}
+	]
+}
